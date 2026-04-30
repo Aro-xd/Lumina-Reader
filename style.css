@@ -1,0 +1,58 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Blokujemy przewijanie całej strony */
+}
+
+#drop-zone {
+    width: 300px;
+    height: 200px;
+    border: 2px dashed #444;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+}
+
+#viewer-container {
+    display: none; /* Ukryte na start */
+    width: 100%;
+    height: 100vh; /* Zajmuje cały ekran */
+    background: white;
+    flex-direction: column;
+}
+
+/* To jest kluczowy moment */
+#viewer {
+    width: 100%;
+    height: calc(100vh - 70px); /* Wysokość ekranu MINUS wysokość paska przycisków */
+}
+
+.controls {
+    height: 70px; /* Sztywna wysokość paska */
+    background: #2a2a2a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
