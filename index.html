@@ -2,23 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EPUB Reader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Reader</title>
     <link rel="stylesheet" href="style.css">
-    
-    <script src="https://cdn.jsdelivr.net/npm/jszip/dist/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
 </head>
 <body>
 
-    <div id="drop-zone">
-        <p>Drag & Drop your EPUB file here or click to browse</p>
-        <input type="file" id="file-input" accept=".epub" hidden>
-    </div>
+    <div id="landing-page">
+        <header>
+            <div class="logo">Lumina<span>Reader</span></div>
+        </header>
 
+        <main class="hero">
+            
+            <div id="drop-zone">
+                <div class="upload-icon">📚</div>
+                <p>Click to browse or drop your book here</p>
+                <input type="file" id="file-input" accept=".epub" hidden>
+            </div>
+
+            <div class="features">
+                <div class="feature"><span>⚡</span> Fast</div>
+                <div class="feature"><span>🔒</span> Private</div>
+                <div class="feature"><span>✨</span> Clean</div>
+            </div>
+        </main>
+    </div>
+    
     <div id="viewer-container" style="display: none;">
         <div id="viewer"></div>
         <div class="controls">
             <button id="prev">Previous</button>
+            <div id="page-info"></div>
             <button id="next">Next</button>
         </div>
     </div>
